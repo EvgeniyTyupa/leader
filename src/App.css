@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Proxima-Nova-Black';
+  font-display:block;
+  src: url('./Assets/fonts/PROXIMA-NOVA-BLACK.OTF');
+}
+
+@font-face {
+  font-family: 'PROXIMANOVA-REGULAR';
+  font-display:block;
+  src: url('./Assets/fonts/PROXIMANOVA-REGULAR.TTF');
+}
+
+@font-face {
+  font-family: 'PROXIMANOVA-THIN';
+   font-display:auto;
+  src: url('./Assets/fonts//PROXIMANOVAT-THIN_0.TTF');
+}
+@font-face {
+  font-family: 'Proxima-Nova-Light';
+    font-display:auto;
+  src: url('./Assets/fonts/Proxima-Nova-Light.otf');
+}
+@font-face {
+  font-family: 'Proxima-Nova-Semibold';
+   font-display:block;
+  src: url('./Assets/fonts/Proxima-Nova-Semibold.otf');
+}
+@font-face {
+  font-family: 'Proxima-Nova-Condensed-Thin';
+   font-display:block;
+  src: url('./Assets/fonts/Proxima-Nova-Condensed-Thin.otf');
+}
+@font-face {
+  font-family: 'Proxima-Nova-Regular';
+    font-display:block;
+  src: url('./Assets/fonts/Proxima-Nova-Regular.otf');
+}
+
+@font-face {
+  font-family: 'PROXIMANOVA-LIGHT';
+  font-display:block;
+  src: url('./Assets/fonts//PROXIMANOVA-LIGHT.TTF');
+}
+@font-face {
+  font-family: 'PROXIMANOVA-SEMIBOLD';
+  font-display:block;
+  src: url('./Assets/fonts/PROXIMANOVA-SEMIBOLD.TTF');
+}
+
+@font-face {
+  font-family: 'Proxima-Nova-Bold';
+  font-display:block;
+  src: url('./Assets/fonts/ProximaNova-Bold.ttf');
+}
+h1, h2, h3, h4, p {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+h1 {
+  font-family: 'Proxima-Nova-Bold';
+}
+h2 {
+  font-family: 'Proxima-Nova-Black';
+}
+h3 {
+  font-family: 'Proxima-Nova-Black';
+}
+h4 {
+  font-family: 'Proxima-Nova-Black';
+}
+p {
+  font-family: 'PROXIMANOVA-LIGHT';
+}
+li {
+  font-family: 'PROXIMANOVA-SEMIBOLD';
+}
+input, textarea {
+  font-family: 'PROXIMANOVA-THIN';
+}
+.slick-slide {
+  transition-duration: .6s;
+  /* transform: scale(.75); */
+}
+.slick-active button{
+  background-color: red !important;
+}

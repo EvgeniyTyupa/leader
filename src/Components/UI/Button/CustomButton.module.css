@@ -1,0 +1,14 @@
+.main {
+    font-weight: 400 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    line-height: 1.5 !important;
+    box-shadow: -5px 3px 10px 0px #861c05c2 !important;
+    color: white !important; 
+    font-size: 20px !important;
+    letter-spacing: 1px !important;
+    padding: 10px 20px !important;
+    border-radius: 50px !important;
+    font-family: 'PROXIMANOVA-SEMIBOLD' !important;
+}
