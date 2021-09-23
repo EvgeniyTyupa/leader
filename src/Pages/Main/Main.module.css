@@ -29,6 +29,9 @@
 }
 
 /* NAVBAR */
+.burger {
+    display: none;
+}
 .navbar {
     width: 100%;
     display: flex;
@@ -199,12 +202,184 @@
     font-weight: 400;
     line-height: 1.5;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.who li span {
+    margin-left: 15px;
 }
 .who li::marker {
     content: '';
-    border: 1px solid #99c9d2;
-    position: absolute;
-    border-radius: 50%;
+}
+.whoBut {
+    background: #e32a00 !important;
+    margin-top: 60px !important;
+}
+.whoBut:hover {
+    background: #8f1b00 !important;
+}
+
+/* WHAT */
+
+.what {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../Assets/shedule-bg.jpg");
+    margin-top: 50px;
+    padding: 50px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.what h3 {
+    font-size: 52px;
+    letter-spacing: 2px;
+    color: #2f2f2f;
+}
+.what h3::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: #bb2611;
+    margin: 20px auto;
+    margin-bottom: 0;
+}
+.whatPoints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.whatPoints span {
+    margin: 10px 0;
+    color: #2f2f2f;
+    font-family: 'PROXIMANOVA-SEMIBOLD';
+    font-size: 1rem;
+    font-weight: 400;
+}
+.sheduleBut {
+    background: #00788e !important;
+    margin-top: 40px !important;
+    box-shadow: -5px 3px 10px 0 #404040 !important;
+}
+.sheduleBut:hover {
+    background: #fff !important;
+    color: #c32e0b !important;
+}
+
+/* SPEAKERS */
+
+.speakers {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #bb2611;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+.speakersContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row !important;
+    margin-top: 20px;
+    width: 60% !important;
+}
+.speakers h2 {
+    font-size: 72px;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    color: #e9e9e9;
+}
+
+/* PAYMENT */
+
+.payment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+.payment h3 {
+    font-size: 52px;
+    letter-spacing: 2px;
+    font-family: 'Proxima-Nova-Black';
+    color: #2f2f2f;
+    margin: 15px 0;
+}
+.payment p {
+    font-size: 40px;
+    font-family: 'Proxima-Nova-Black';
+    color: #bb2611;
+    text-align: center;
+    margin: 1rem 0;
+}
+.payment a {
+    text-decoration: none;
+    color: white;
+}
+.payBut {
+    font-weight: 400 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    line-height: 1.5 !important;
+    box-shadow: -5px 3px 10px 0px #861c05c2 !important;
+    color: white !important; 
+    font-size: 20px !important;
+    letter-spacing: 1px !important;
+    padding: 10px 20px !important;
+    border-radius: 50px !important;
+    font-family: 'PROXIMANOVA-SEMIBOLD' !important;
+    background: #e32a00 !important;
+    margin-top: 50px !important;
+}
+.payBut:hover {
+    background: #8f1b00 !important;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.footer h3 {
+    font-size: 30px;
+    font-family: 'Proxima-Nova-Black';
+    color: #2f2f2f;
+    margin: 15px 0;
+    text-align: center;
+}
+.links {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.links a {
+    color: #2f2f2f;
+    font-size: 20px;
+}
+.links svg {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 1650px) {
+    .speakersContainer {
+        width: 100% !important;
+    }
+    .aboutBlock {
+        width: 1140px;
+    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -213,5 +388,206 @@
         font-size: 72px;
         letter-spacing: 2px;
         color: #e9e9e9;
+    }
+    .speakersContainer {
+        width: 90% !important;
+    }
+    .aboutBlock {
+        width: 1170px;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .navbar {
+        z-index: 3;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .menu > div {
+        margin: 0 50px;
+    }
+    .homeContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: -40px;
+    }
+    .titleContainer {
+        margin-top: 0;
+    }
+    .aboutBlock {
+        width: 1000px;
+    }
+    .bigCircle {
+       display: none;
+    }
+    .aboutBlock {
+        height: 1000px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .text p {
+        font-size: 18px;
+    }
+    .slider {
+        width: 90%;
+    }
+    .about {
+        height: max-content;
+    }
+    .aboutBlock {
+        justify-content: flex-start;
+        height: max-content;
+        padding-bottom: 80px;
+    }
+    .speakersContainer {
+        flex-direction: column !important;
+    }
+    .links {
+        width: 30%;
+        margin-top: 20px;
+    }
+    .links svg {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .aboutBlock {
+        width: 758px;
+    }
+}
+
+@media screen and (max-width: 758px) {
+    .aboutBlock {
+        width: 558px;
+    }
+    .menu > div {
+        margin: 0px;
+    }
+    .menu button {
+        margin: 0 20px;
+    }
+    .titleContainer h1 {
+        font-size: 52px;
+    }
+    .titleContainer p {
+        font-size: 28px;
+    }
+    .dateBlock span {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 558px) {
+    .aboutBlock {
+        width: 458px;
+    }
+    .payment p {
+        font-size: 28px;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    .menu button {
+        margin: 0px;
+    }
+    .what h3 {
+        text-align: center;
+        font-size: 32px;
+    }
+    .about h1 {
+        margin-top: 0;
+    }
+    .menu {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .navContainer {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end !important;
+        flex-direction: row !important;
+    }
+    .navbar {
+        padding-top: 0
+    }
+}
+
+@media screen and (max-width: 458px) {
+    .aboutBlock {
+        width: 400px;
+    }
+    .whatPoints span {
+        text-align: center;
+    }
+    .speakers {
+        padding: 25px;
+    }
+    .speakers h2 {
+        font-size: 54px;
+    }
+    .who ul {
+        padding-left: 15px;
+    }
+    .whoBut {
+        margin-top: 20px !important;
+    }
+    .payment p {
+        font-size: 22px
+    }
+    .links {
+        width: 80%;
+    }
+    .menu button {
+        margin: 10px 0;
+    }
+    .navbar {
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .aboutBlock {
+        width: 340px;
+        margin-top: 0;
+    }
+    .about {
+        margin-top: 30px;
+    }
+    .about h1 {
+        font-size: 55px;
+    }
+    .whatPoints {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .footer h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .aboutBlock {
+        width: 310px;
+    }
+    .payment p {
+        font-size: 20px;
+    }
+    .what h3 {
+        font-size: 28px;
+    }
+    .titleContainer {
+        margin-top: 30px;
     }
 }

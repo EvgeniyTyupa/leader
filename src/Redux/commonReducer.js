@@ -6,7 +6,7 @@ const SET_IS_SUCCESS = 'SET_IS_SUCCESS'
 
 let initialState = {
     isFetching: false,
-    currentLanguage: "ua",
+    currentLanguage: "ru",
     isSuccess: false
 }
 

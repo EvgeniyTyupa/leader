@@ -8,7 +8,20 @@ import slide3 from '../../Assets/slide3.jpg'
 import Styled from "styled-components"
 
 const SliderPhotos = (props) => {
-    const slides = [slide1, slide2, slide3]
+    const slides = [
+        {
+            img: slide1,
+            id: "1"
+        },
+        {
+            img: slide2,
+            id: "2"
+        },
+        {
+            img: slide3,
+            id: "3"        
+        }
+    ]
 
     const settings = {
         infinite: true,
@@ -19,7 +32,7 @@ const SliderPhotos = (props) => {
     };
     return(
         <Slider {...settings}>
-            {slides.map(item => <Slide image={item}/>)}
+            {slides.map(item => <Slide image={item.img} key={item.id}/>)}
         </Slider>
     )
 }
@@ -30,6 +43,18 @@ const Slide = Styled.div`
     height: 400px;
     background-size: cover;
 
+    @media screen and (max-width: 1170px) {
+        height: 500px;
+        background-position: center;
+    }
+
+    @media screen and (max-width: 558px) {
+        height: 300px
+    }
+
+    @media screen and (max-width: 458px) {
+        height: 200px
+    }
 `
 
 export default SliderPhotos

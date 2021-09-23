@@ -1,0 +1,30 @@
+.window {
+    width: 40%;
+    box-sizing: border-box;
+    padding-bottom: 0;
+}
+.field {
+    width: 100%;
+    margin: 15px 0;
+}
+.field div {
+    width: 100%;
+}
+.window form button {
+    width: 100%;
+    color: #e32a00;
+    height: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .window {
+        width: 80%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .window {
+        width: 95%;
+    }
+}

@@ -1,0 +1,45 @@
+
+.burger svg {
+    font-size: 2rem;
+    color: white
+}
+.menuItems {
+    display: flex;
+    flex-direction: column;
+}
+.menuItems button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: 'PROXIMANOVA-REGULAR';
+    font-size: 18px;
+    margin: 10px 0;
+}
+.closeBut {
+    width: max-content;
+    align-self: flex-end;
+}
+.closeBut svg {
+    font-size: 2rem;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    flex-grow: 1;
+    width: 60vw !important;
+    overflow:scroll;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.footer {
+    height: 60px;
+}
+.footer button {
+    color: #2f2f2f
+}
+.activeLang {
+    color: #e32a00 !important
+}

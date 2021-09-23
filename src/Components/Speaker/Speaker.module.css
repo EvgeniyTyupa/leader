@@ -1,0 +1,43 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 540px;
+    position: relative;
+}
+.circle {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    background: #e86d47;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+.circle:hover {
+    background: white;
+}
+.main h5 {
+    font-size: 24px;
+    color: #fff;
+    margin: 20px 0;
+    font-family: 'Proxima-Nova-Black';
+    margin-block-end: 0;
+}
+.main p {
+    font-family: 'PROXIMANOVA-REGULAR';
+    font-size: 16px;
+    color: #fff;
+    margin: 20px 0;
+    padding: 0 30px;
+}
+
+@media screen and (max-width: 350px) {
+    .main {
+        width: 280px;
+    }
+}
