@@ -524,6 +524,9 @@
 }
 
 @media screen and (max-width: 458px) {
+    .about {
+        margin-top: 40px;
+    }
     .aboutBlock {
         width: 400px;
     }

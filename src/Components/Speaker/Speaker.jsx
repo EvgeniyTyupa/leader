@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classes from './Speaker.module.css'
 import Styled from 'styled-components'
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Speaker = (props) => {
     const { speaker, onClick } = props
@@ -9,8 +12,12 @@ const Speaker = (props) => {
         onClick(speaker)
     }
 
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, [])
+
     return(
-        <div className={classes.main}>
+        <div className={classes.main} data-aos="fade-down" data-aos-duration="1500">
             <div className={classes.circle} onClick={handleSpeaker}/>
             <SpeakerImage image={speaker.photo} onClick={handleSpeaker}/>
             <h5>{speaker.name}</h5>

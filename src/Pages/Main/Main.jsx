@@ -29,6 +29,9 @@ import Preloader from '../../Components/Preloader/Preloader'
 import Thankyou from '../../Components/Modals/Thankyou/Thankyou'
 import Burger from '../../Components/Burger/Burger'
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 const useSelectStyles = makeStyles({
     root: {
         color: "#aaaaaa",
@@ -176,6 +179,10 @@ const Main = (props) => {
         history.push(history.location.pathname + `?lang=${props.currentLanguage}`)
     }, [props.currentLanguage])
 
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, [])
+
     return(
         <div className={classes.main}>
             {currentSpeaker && <ModalSpeaker speaker={currentSpeaker} onClick={setCurrentSpeaker}/>}
@@ -189,7 +196,7 @@ const Main = (props) => {
                 </video>
                 <div className={classes.videoBlack}></div>
             </div>
-            <div className={classes.navbar}>
+            <div className={classes.navbar} data-aos="fade" data-aos-duration="1000">
                 <Container className={classes.navContainer}>
                     <div className={classes.burger}>
                         <Burger handleShedule={handleShedule} aboutRef={aboutRef} speakersRef={speakersRef}/>
@@ -207,26 +214,28 @@ const Main = (props) => {
             </div>
             <div className={classes.home}>
                 <Container className={classes.homeContainer}>
-                    <div className={classes.titleContainer}>
+                    <div className={classes.titleContainer} data-aos="fade-down" data-aos-duration="2000" data-aos-delay="300">
                         <h1>{t("home.title")}</h1>
                         <p>{t("home.subTitle")}</p>
                     </div>
-                    <div className={classes.dateBlock}>
+                    <div className={classes.dateBlock}  data-aos="fade-down" data-aos-duration="2000" data-aos-delay="1000">
                         <span>{t("home.online")}</span>
                         <span>{t("home.date")}</span>
                     </div>
-                    <div className={classes.butContainer}>
+                    <div className={classes.butContainer}  data-aos="fade-down" data-aos-duration="2000" data-aos-delay="2000">
                         <CustomButton onClick={handleRegister} text={t("action.be")} className={classes.homeBut}/>
                     </div>
-                    <IconButton className={classes.circleBut} onClick={scrollToAbout}>
-                        <KeyboardArrowDownIcon/>
-                    </IconButton>
+                    <div  data-aos="fade-down" data-aos-duration="2000" data-aos-delay="3000">
+                        <IconButton className={classes.circleBut} onClick={scrollToAbout}>
+                            <KeyboardArrowDownIcon/>
+                        </IconButton>
+                    </div>
                 </Container>
             </div>
             <div className={classes.about} ref={aboutRef}>
                 <h1>{t("about.title")}</h1>
                 <div className={classes.aboutBlock}>
-                    <div className={classes.text}>
+                    <div className={classes.text} data-aos="fade-left" data-aos-duration="1500">
                         <img src={logo} alt="logo" className={classes.logoAbout}/>
                         <p>
                             {t("about.text.one")}&nbsp;
@@ -244,7 +253,7 @@ const Main = (props) => {
                 <div className={classes.bigCircle}/>
             </div>
             <Container>
-                <div className={classes.who}>
+                <div className={classes.who} data-aos="fade-down" data-aos-duration="1500">
                     <h3>{t("who.title")}</h3>
                     <p>{t("who.subtitle")}</p>
                     <ul>
@@ -274,14 +283,14 @@ const Main = (props) => {
                         </li>
                     </ul>
                 </div>
-                <div className={classes.butContainer}>
+                <div className={classes.butContainer} data-aos="zoom-in" data-aos-duration="1000">
                     <CustomButton onClick={handleRegister} text={t("action.register")} className={classes.whoBut}/>
                 </div>
             </Container>
             <div className={classes.what}>
                 <Container className={classes.whatContainer}>
-                    <h3>{t("what.title")}</h3>
-                    <div className={classes.whatPoints}>
+                    <h3 data-aos="fade-down" data-aos-duration="1500">{t("what.title")}</h3>
+                    <div className={classes.whatPoints} data-aos="fade-down" data-aos-duration="1500">
                         <span>{t("what.points.one")}</span>
                         <span>{t("what.points.two")}</span>
                         <span>{t("what.points.three")}</span>
@@ -292,18 +301,18 @@ const Main = (props) => {
                         <span>{t("what.points.eight")}</span>
                         <span>{t("what.points.nine")}</span>
                     </div>
-                    <div>
+                    <div data-aos="zoom-in" data-aos-duration="1000">
                         <CustomButton onClick={handleShedule} className={classes.sheduleBut} text={t("action.shedule")}/>
                     </div>
                 </Container>
             </div>
             <div className={classes.speakers} ref={speakersRef}>
-                <h2>{t("speakers.title")}</h2>
-                <Container className={classes.speakersContainer}>
+                <h2 data-aos="fade-down" data-aos-duration="1500">{t("speakers.title")}</h2>
+                <Container className={classes.speakersContainer} >
                     {speakers.map(item => <Speaker speaker={item} key={item.id} onClick={setCurrentSpeaker}/>)}
                 </Container>
             </div>
-            <div className={classes.payment}>
+            <div className={classes.payment} data-aos="fade-down" data-aos-duration="1500">
                 <Container>
                     <h3>{t("payment.title")}</h3>
                     <p>{t("payment.before")} - 2000 грн / <br/> $70</p>
@@ -314,7 +323,7 @@ const Main = (props) => {
                     <CustomButton onClick={handleRegister} text={t("action.register")} className={classes.whoBut}/>
                 </Container>
             </div>
-            <div className={classes.footer}>
+            <div className={classes.footer} data-aos="fade" data-aos-duration="1500">
                 <h3>{t("footer.title")}</h3>
                 <div className={classes.links}>
                     <a href="https://www.facebook.com/profispaceschool/" target="_blank" rel="noreferrer nofollow">

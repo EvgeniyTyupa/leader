@@ -104,16 +104,6 @@ export const useShedule = () => {
                 t("modalShedule.points.ten.three"),
                 t("modalShedule.points.ten.four")
             ]
-        },
-        {
-            id: "11",
-            title: t("modalShedule.points.eleven.title"),
-            points: [
-                t("modalShedule.points.eleven.one"),
-                t("modalShedule.points.eleven.two"),
-                t("modalShedule.points.eleven.three"),
-                t("modalShedule.points.eleven.four")
-            ]
         }
     ]
     return shedule

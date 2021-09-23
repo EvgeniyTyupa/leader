@@ -104,6 +104,11 @@ export const useSpeakers = () => {
                     text: t("speakers.two.points.five"),
                     icon: customer
                 },
+                {
+                    id: "6",
+                    text: t("speakers.two.points.six"),
+                    icon: customer
+                },
             ]
         },
         {
