@@ -24,7 +24,7 @@ export const googleApi = {
 
 export const tgApi = {
     saveDataToTelegramBot(formData){
-        let message = "<strong>Новая заявка!</strong>\n<strong>Лендинг:</strong> brand.profi-space.com / обычный\n<strong>Имя:</strong> " + formData.name +  "\n<strong>Телефон:</strong> " + formData.phone + "\n<strong>Email:</strong> " + formData.email;
+        let message = "<strong>Новая заявка!</strong>\n<strong>Лендинг:</strong> leader.profi-space.com / обычный\n<strong>Имя:</strong> " + formData.name +  "\n<strong>Телефон:</strong> " + formData.phone + "\n<strong>Email:</strong> " + formData.email;
         const data = {
             chat_id: chatId,
             text: message,
