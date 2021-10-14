@@ -145,7 +145,7 @@ const Main = (props) => {
         let date = moment("2021-10-10")
         let now = moment()
         if(now > date){
-            setPaymentLink("https://secure.wayforpay.com/page?vkh=614c4702-59d4-44da-a5fd-1e9d22d1dba8")
+            setPaymentLink("https://secure.wayforpay.com/button/ba1f232bc9156")
         }else {
             setPaymentLink("https://secure.wayforpay.com/button/ba1f232bc9156")
         }
